@@ -84,7 +84,7 @@ export default function App() {
   const [campfire, setCampfire] = useState<Campfire | null>(null);
   const [droppedItems, setDroppedItems] = useState<DroppedItem[]>([]);
   const [clouds, setClouds] = useState<Cloud[]>([]);
-  const [draggingItem, setDraggingItem] = useState<{ source: 'inventory' | 'hotbar'; index: number; type: ResourceType | ToolType; amount: number } | null>(null);
+  const [draggingItem, setDraggingItem] = useState<{ source: 'inventory' | 'hotbar' | 'equipment'; index: number | string; type: ResourceType | ToolType; amount: number } | null>(null);
   const [hoveredHotbarIndex, setHoveredHotbarIndex] = useState<number | null>(null);
   const [mousePos, setMousePos] = useState<Point>({ x: 0, y: 0 });
   const [isMouseDown, setIsMouseDown] = useState(false);

@@ -87,9 +87,9 @@ export function Inventory({
         return (
             <div className="flex items-center justify-center relative z-10">
                 {item.type === 'super_axe' ? (
-                    axeImage ? <img src="/assets/tools/super_axe.png" className="w-7 h-7 object-contain drop-shadow-[0_0_12px_rgba(245,158,11,0.8)]" alt="Super Axe" /> : <Zap size={18} className="text-amber-500" />
+                    axeImage ? <img src={`${import.meta.env.BASE_URL}assets/tools/super_axe.png`} className="w-7 h-7 object-contain drop-shadow-[0_0_12px_rgba(245,158,11,0.8)]" alt="Super Axe" /> : <Zap size={18} className="text-amber-500" />
                 ) : item.type === 'super_pickaxe' ? (
-                    pickaxeImage ? <img src="/assets/tools/super_pickaxe.png" className="w-7 h-7 object-contain drop-shadow-[0_0_12px_rgba(245,158,11,0.8)]" alt="Super Pick" /> : <Zap size={18} className="text-amber-500" />
+                    pickaxeImage ? <img src={`${import.meta.env.BASE_URL}assets/tools/super_pickaxe.png`} className="w-7 h-7 object-contain drop-shadow-[0_0_12px_rgba(245,158,11,0.8)]" alt="Super Pick" /> : <Zap size={18} className="text-amber-500" />
                 ) : item.type.includes('axe') ? <Zap size={18} className="text-blue-400" /> : <Hammer size={18} className="text-stone-400" />}
             </div>
         );
