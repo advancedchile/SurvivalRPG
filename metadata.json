@@ -1,0 +1,6 @@
+{
+  "name": "The world behind",
+  "description": "An isometric pixel art explorer with WASD movement, camera follow, and Factorio-style zoom.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}
