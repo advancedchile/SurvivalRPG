@@ -26,11 +26,11 @@ export function useAssets() {
 
   useEffect(() => {
     const imgAxe = new Image();
-    imgAxe.src = '/assets/tools/super_axe.png';
+    imgAxe.src = `${import.meta.env.BASE_URL}assets/tools/super_axe.png`;
     imgAxe.onload = () => setAxeImage(imgAxe);
 
     const imgPickaxe = new Image();
-    imgPickaxe.src = '/assets/tools/super_pickaxe.png';
+    imgPickaxe.src = `${import.meta.env.BASE_URL}assets/tools/super_pickaxe.png`;
     imgPickaxe.onload = () => setPickaxeImage(imgPickaxe);
 
     const loadTileImages = (dir: string, baseName: string, setter: React.Dispatch<React.SetStateAction<HTMLImageElement[]>>) => {
@@ -39,7 +39,7 @@ export function useAssets() {
       for (let i = 1; i <= MAX_TILES; i++) {
         promises.push(new Promise<HTMLImageElement | null>(resolve => {
           const img = new Image();
-          img.src = `/assets/tiles/${dir}/${baseName}${i}.png`;
+          img.src = `${import.meta.env.BASE_URL}assets/tiles/${dir}/${baseName}${i}.png`;
           img.onload = () => resolve(img);
           img.onerror = () => resolve(null);
         }));
@@ -53,24 +53,24 @@ export function useAssets() {
     loadTileImages('dirt', 'dirt', setDirtTextures);
 
     const imgWood = new Image();
-    imgWood.src = '/assets/wood/log_icon.png';
+    imgWood.src = `${import.meta.env.BASE_URL}assets/wood/log_icon.png`;
     imgWood.onload = () => setWoodIcon(imgWood);
 
     const imgStone = new Image();
-    imgStone.src = '/assets/stone/stone_icon.png';
+    imgStone.src = `${import.meta.env.BASE_URL}assets/stone/stone_icon.png`;
     imgStone.onload = () => setStoneIcon(imgStone);
 
     const imgCoal = new Image();
-    imgCoal.src = '/assets/coal/coal_icon.png';
+    imgCoal.src = `${import.meta.env.BASE_URL}assets/coal/coal_icon.png`;
     imgCoal.onload = () => setCoalIcon(imgCoal);
 
     const icons = [
-        { src: '/assets/copper/copper_icon.png', setter: setCopperIcon },
-        { src: '/assets/iron/iron_icon.png', setter: setIronIcon },
-        { src: '/assets/gold/gold_icon.png', setter: setGoldIcon },
-        { src: '/assets/diamond/diamond_icon.png', setter: setDiamondIcon },
-        { src: '/assets/aluminum/aluminum_icon.png', setter: setAluminumIcon },
-        { src: '/assets/silver/silver_icon.png', setter: setSilverIcon }
+        { src: `${import.meta.env.BASE_URL}assets/copper/copper_icon.png`, setter: setCopperIcon },
+        { src: `${import.meta.env.BASE_URL}assets/iron/iron_icon.png`, setter: setIronIcon },
+        { src: `${import.meta.env.BASE_URL}assets/gold/gold_icon.png`, setter: setGoldIcon },
+        { src: `${import.meta.env.BASE_URL}assets/diamond/diamond_icon.png`, setter: setDiamondIcon },
+        { src: `${import.meta.env.BASE_URL}assets/aluminum/aluminum_icon.png`, setter: setAluminumIcon },
+        { src: `${import.meta.env.BASE_URL}assets/silver/silver_icon.png`, setter: setSilverIcon }
     ];
 
     icons.forEach(icon => {

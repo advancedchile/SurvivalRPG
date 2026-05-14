@@ -6,7 +6,7 @@ export function useAmbientAudio(enabled: boolean = true) {
   useEffect(() => {
     if (!enabled) return;
 
-    const audio = new Audio('/assets/sound_effects/sonido-ambiente-de-bosque.mp3');
+    const audio = new Audio(`${import.meta.env.BASE_URL}assets/sound_effects/sonido-ambiente-de-bosque.mp3`);
     audio.loop = true;
     audio.volume = 0.4; // Ajusta este valor (0.0 a 1.0) para que no sea muy molesto
     audioRef.current = audio;

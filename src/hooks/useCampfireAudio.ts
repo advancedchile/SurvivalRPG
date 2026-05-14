@@ -7,7 +7,7 @@ export function useCampfireAudio(playerPos: Point, campfirePos: Point | null | u
   useEffect(() => {
     if (!enabled) return;
 
-    const audio = new Audio('/assets/sound_effects/sonido-de-fogata.mp3');
+    const audio = new Audio(`${import.meta.env.BASE_URL}assets/sound_effects/sonido-de-fogata.mp3`);
     audio.loop = true;
     audio.volume = 0;
     audioRef.current = audio;

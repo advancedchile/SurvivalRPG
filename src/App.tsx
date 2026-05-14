@@ -2869,9 +2869,9 @@ export default function App() {
           ) : (
             <div className="flex items-center justify-center p-2 rounded-xl">
                  {draggingItem.type === 'super_axe' ? (
-                     axeImage ? <img src="/assets/tools/super_axe.png" className="w-8 h-8 object-contain drop-shadow-[0_0_8px_rgba(245,158,11,0.8)]" alt="Super Axe" /> : <Zap size={24} className="text-amber-500 drop-shadow-[0_0_8px_rgba(245,158,11,0.8)]" />
+                     axeImage ? <img src={`${import.meta.env.BASE_URL}assets/tools/super_axe.png`} className="w-8 h-8 object-contain drop-shadow-[0_0_8px_rgba(245,158,11,0.8)]" alt="Super Axe" /> : <Zap size={24} className="text-amber-500 drop-shadow-[0_0_8px_rgba(245,158,11,0.8)]" />
                  ) : draggingItem.type === 'super_pickaxe' ? (
-                     pickaxeImage ? <img src="/assets/tools/super_pickaxe.png" className="w-8 h-8 object-contain drop-shadow-[0_0_8px_rgba(245,158,11,0.8)]" alt="Super Pick" /> : <Zap size={24} className="text-amber-500 drop-shadow-[0_0_8px_rgba(245,158,11,0.8)]" />
+                     pickaxeImage ? <img src={`${import.meta.env.BASE_URL}assets/tools/super_pickaxe.png`} className="w-8 h-8 object-contain drop-shadow-[0_0_8px_rgba(245,158,11,0.8)]" alt="Super Pick" /> : <Zap size={24} className="text-amber-500 drop-shadow-[0_0_8px_rgba(245,158,11,0.8)]" />
                  ) : draggingItem.type.includes('axe') ? <Zap size={24} className="text-blue-400" /> : <Hammer size={24} className="text-stone-400" />}
             </div>
           )}

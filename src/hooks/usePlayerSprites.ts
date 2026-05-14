@@ -32,7 +32,7 @@ export function usePlayerSprites() {
         img.onerror = () => {
           // Si no existe, usamos un fallback temporal (o simplemente no lo registramos)
         };
-        img.src = `/sprites/player/${key}.png`;
+        img.src = `${import.meta.env.BASE_URL}sprites/player/${key}.png`;
       });
     });
   }, []);

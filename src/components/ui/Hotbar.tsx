@@ -87,10 +87,10 @@ export function Hotbar({
                 {tool ? (
                   <div className="relative group-hover:scale-110 transition-transform mt-1 flex items-center justify-center pointer-events-none">
                     {tool.type === 'super_axe' ? (
-                        axeImage ? <img src="/assets/tools/super_axe.png" className="w-7 h-7 object-contain -rotate-6 drop-shadow-[0_0_5px_rgba(245,158,11,0.8)]" alt="Super Axe" /> : <Zap size={24} className="-rotate-6 text-amber-500 drop-shadow-[0_0_5px_rgba(245,158,11,0.8)]" />
-                    ) : tool.type === 'super_pickaxe' ? (
-                        pickaxeImage ? <img src="/assets/tools/super_pickaxe.png" className="w-7 h-7 object-contain -rotate-6 drop-shadow-[0_0_5px_rgba(245,158,11,0.8)]" alt="Super Pick" /> : <Zap size={24} className="-rotate-6 text-amber-500 drop-shadow-[0_0_5px_rgba(245,158,11,0.8)]" />
-                    ) : tool.type.includes('axe') ? <Zap size={24} className="-rotate-6 text-blue-400" /> : <Hammer size={24} className="-rotate-6 text-stone-400" />}
+                        axeImage ? <img src={`${import.meta.env.BASE_URL}assets/tools/super_axe.png`} className="w-7 h-7 object-contain -rotate-6 drop-shadow-[0_0_5px_rgba(245,158,11,0.8)]" alt="Super Axe" /> : <Zap size={24} className="-rotate-6 text-amber-500 drop-shadow-[0_0_5px_rgba(245,158,11,0.8)]" />
+                      ) : tool.type === 'super_pickaxe' ? (
+                        pickaxeImage ? <img src={`${import.meta.env.BASE_URL}assets/tools/super_pickaxe.png`} className="w-7 h-7 object-contain -rotate-6 drop-shadow-[0_0_5px_rgba(245,158,11,0.8)]" alt="Super Pick" /> : <Zap size={24} className="-rotate-6 text-amber-500 drop-shadow-[0_0_5px_rgba(245,158,11,0.8)]" />
+                      ) : (tool.type.includes('axe') ? <Zap size={24} className="-rotate-6 text-blue-400" /> : <Hammer size={24} className="-rotate-6 text-stone-400" />)}
                   </div>
                 ) : (
                   <div className="w-1 h-1 bg-white/10 rounded-full group-hover:scale-150 transition-all mt-1" />

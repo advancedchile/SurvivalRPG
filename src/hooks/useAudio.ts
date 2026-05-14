@@ -26,12 +26,12 @@ export function useAudio() {
       return audio;
     };
 
-    chopAudioRef.current = loadAudio('/assets/sound_effects/axe-hiting-a-tree.mp3');
-    pickAudioRef.current = loadAudio('/assets/sound_effects/pickaxe-hitting-minerals.mp3');
-    stepAudioRef.current = loadAudio('/assets/sound_effects/grass_steps.mp3');
-    stoneStepAudioRef.current = loadAudio('/assets/sound_effects/stone_steps.mp3');
-    dirtStepAudioRef.current = loadAudio('/assets/sound_effects/dirt_steps.mp3');
-    snowStepAudioRef.current = loadAudio('/assets/sound_effects/snow_steps.mp3');
+    chopAudioRef.current = loadAudio(`${import.meta.env.BASE_URL}assets/sound_effects/axe-hiting-a-tree.mp3`);
+    pickAudioRef.current = loadAudio(`${import.meta.env.BASE_URL}assets/sound_effects/pickaxe-hitting-minerals.mp3`);
+    stepAudioRef.current = loadAudio(`${import.meta.env.BASE_URL}assets/sound_effects/grass_steps.mp3`);
+    stoneStepAudioRef.current = loadAudio(`${import.meta.env.BASE_URL}assets/sound_effects/stone_steps.mp3`);
+    dirtStepAudioRef.current = loadAudio(`${import.meta.env.BASE_URL}assets/sound_effects/dirt_steps.mp3`);
+    snowStepAudioRef.current = loadAudio(`${import.meta.env.BASE_URL}assets/sound_effects/snow_steps.mp3`);
 
     const resumeOnInteraction = () => {
       initCtx();
