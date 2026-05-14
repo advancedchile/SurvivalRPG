@@ -8,13 +8,14 @@
   position: absolute;
   pointer-events: none;
   background: rgba(20, 20, 20, 0.85);
+  -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
   border: 1px solid rgba(255, 60, 60, 0.4);
   border-radius: 8px;
   padding: 10px 14px;
   color: white;
   min-width: 140px;
-  transform: translate(15px, 15px); /* Offset from cursor */
+  transform: translate(15px, 15px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
   z-index: 1000;
   transition: opacity 0.2s ease-in-out;
@@ -51,10 +52,9 @@
   color: #aaaaaa;
 }
 
-@layer base {
-  body {
-    @apply bg-[#1a1a1a] text-[#e0e0e0] overflow-hidden select-none;
-    image-rendering: pixelated;
-    font-family: var(--font-mono);
-  }
+body {
+  @apply bg-[#1a1a1a] text-[#e0e0e0] overflow-hidden select-none;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: pixelated;
+  font-family: var(--font-mono);
 }
